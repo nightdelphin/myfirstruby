@@ -1,7 +1,7 @@
 class TasksController < ApplicationController
   def index
     @task = Task.all
-    render plain: @task.inspect
+    #render plain: @task.inspect
   end
   
   def show
