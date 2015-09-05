@@ -1,7 +1,6 @@
 class TasksController < ApplicationController
   def index
     @task = Task.all
-    #render plain: @task.inspect
   end
   
   def show
@@ -12,7 +11,6 @@ class TasksController < ApplicationController
   end
   
   def create
-    #render plain: params[:task].inspect
     @task = Task.new(params.require(:task).permit(:title, :text))
     @task.save
     redirect_to @task
